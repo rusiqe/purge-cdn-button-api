@@ -2,12 +2,10 @@ const button = document.getElementById('post-btn');
 
 button.addEventListener('click', async _ => {
   try {     
-    const response = await fetch('https://api.cdn77.com/v3/cdn/1215031777/job/purge', {
+    const response = await fetch('https://api.cdn77.com/v3/cdn/1215031777/job/purge-all', {
       method: 'post',
       body: {
-        "paths": [
-          "/banners/"
-          ]
+        //no body needed for purge-all job type
       }
     });
     console.log('Completed!', response);
